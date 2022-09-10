@@ -1,21 +1,17 @@
 #include <stdio.h>
-/* more headers goes there */
 
 /**
- * main - Entry point
- * Return: always zero
+* main - entry point
+* Return: 0
+* prints all all small letters
 */
 int main(void)
 {
-	unsigned char n = 0;
+	unsigned char ch;
 
-	for (n = 'a'; n <= 'z'; n++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(n);
-	}
-	for (n = 'A'; n <= 'Z'; n++)
-	{
-		putchar(n);
+		putchar(ch);
 	}
 	putchar(010);
 	return (0);
