@@ -13,6 +13,6 @@ int main(void)
 	{
 		putchar(ch);
 	}
-	putchar(010);
+	putchar('\n');
 	return (0);
 }
