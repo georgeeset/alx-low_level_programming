@@ -10,11 +10,11 @@ int main(void)
 {
 	unsigned char hx;
 
-	for (hx = 48; hx < 63; hx++)
+	for (hx = 48; hx <= 63; hx++)
 	{
 		if (hx > 57)
 		{
-			putchar(hx + 40);
+			putchar(hx + 39);
 		}
 		else
 		{
