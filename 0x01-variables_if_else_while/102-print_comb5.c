@@ -23,7 +23,9 @@ int main(void)
 			putchar((sec % 10) + 48);
 			sec++;
 			if (sec == 98 && fst == 99)
+			{
 				continue;
+			}
 			putchar(',');
 			putchar(' ');
 		}
