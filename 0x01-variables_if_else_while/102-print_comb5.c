@@ -26,8 +26,11 @@ int main(void)
 			{
 				continue;
 			}
-			putchar(',');
-			putchar(' ');
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 		fst++;
 		sec = fst + 1;
