@@ -22,11 +22,7 @@ int main(void)
 			putchar((sec / 10) + 48);
 			putchar((sec % 10) + 48);
 			sec++;
-			if (sec == 98 && fst == 99)
-			{
-				continue;
-			}
-			else
+			if (sec != 99 && fst != 98)
 			{
 				putchar(',');
 				putchar(' ');
