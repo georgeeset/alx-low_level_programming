@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-	unsigned char fst = 0;
-	unsigned char sec = 1;
+	unsigned int fst = 0;
+	unsigned int sec = 1;
 
 	while (fst < 99)
 	{
