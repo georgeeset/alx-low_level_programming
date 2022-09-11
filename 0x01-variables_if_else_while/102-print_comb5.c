@@ -16,7 +16,7 @@ int main(void)
 	{
 		while (sec < 100)
 		{
-			if(fst == 0 && sec == 0)
+			if (fst == 0 && sec == 0)
 			{
 				sec++;
 			}
