@@ -1,0 +1,3 @@
+#!/bin/bash
+echo frying program for $CFILE
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 $CFILE -o friedfile.out
