@@ -23,6 +23,6 @@ int print_last_digit(int n)
 	{
 		l = n % -10;
 		_putchar(l + 48);
-		return (l);
+		return (l * -1);
 	}
 }
