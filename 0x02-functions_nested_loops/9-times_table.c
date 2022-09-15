@@ -14,23 +14,27 @@ void times_table(void)
 	int v = 0;
 	int i;
 
-	while (v < 9)
+	for (h = 0; h <= 9; h++)
 	{
-		for (h = 0; h <= 9; h++)
+		for (inc = 0; inc <= 9; inc++)
 		{
-			for (inc = 0; inc <= 9; inc++)
+			if (inc > 0)
 			{
-				if (inc > 0)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
-				i = inc * h;
-				_putchar((i / 10) + 48);
-				_putchar((i % 10) + 48);
+				_putchar(',');
+				_putchar(' ');
 			}
-			_putchar(10);
+			i = inc * h;
+			if (i > 9)
+			{
+				_putchar((i / 10) + 48);
+			}
+			else if (inc > 0)
+			{
+				_putchar(' ');
+			}
+			_putchar((i % 10) + 48);
 		}
-		v++;
+			_putchar(10);
 	}
+	v++;
 }
