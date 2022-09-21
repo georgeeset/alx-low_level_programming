@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * *_strcat - concatinate two strings together
@@ -13,17 +12,15 @@ char *_strcat(char *dest, char *src)
 {
 	int destlen = 0;
 	int srclen = 0;
-	
+
 	/* count the length of dest and src*/
 	do
 		destlen++;
 	while (dest[destlen] != '\0');
 
-	do
-	{
-		srclen++;
+	do {
 		*(dest + destlen + srclen) = src[srclen];
-	}
-	while (src[srclen] != '\0');
-	return dest;
+		srclen++;
+	} while (src[srclen] != '\0');
+	return (dest);
 }
