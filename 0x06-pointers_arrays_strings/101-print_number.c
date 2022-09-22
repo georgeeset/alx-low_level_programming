@@ -13,14 +13,14 @@ void print_number(int n)
 	/* indicate negative value and convert to possitive */
 	if (n < 0)
 	{
-		_putchar('-');
+		_putchar(45);
 		n *= -1;
 	}
 
 	/* simply print 0 if n is 0 */
 	if (n < 10)
 	{
-		_putchar(n + '0');
+		_putchar(n + 48);
 		return;
 	}
 
