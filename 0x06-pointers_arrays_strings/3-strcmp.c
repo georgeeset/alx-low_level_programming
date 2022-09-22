@@ -11,23 +11,18 @@
 int _strcmp(char *s1, char *s2)
 {
 	int x = 0;
-	int s1count = 0;
-	int s2count = 0;
-	
-	/* get ascii count of s1 */
-	while (s1[x] != '\0')
-	{
-		s1count += s1[x];
-		x++;
-	}
+	int diff = 0;
 
-	/* get count of s2*/
-	x = 0;
-	while (s2[x] != '\0')
+	/**
+	 * scan through both strings and subtract each
+	 * exit the loop when subtraction result is not zero
+	 */
+
+	for (x = 0; (s1[x] != '\0') && (s2[x] != '\0'); x++)
 	{
-		s2count += s2[x];
-		x++;
+		diff = s1[x] - s2[x];
+		if (diff != 0)
+			break;
 	}
-	/* subtract s2 from s1 */
-	return (s1count - s2count);
+	return (diff);
 }
