@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strbrk - function searches for any of a set of bytes
+ * _strpbrk - function searches for any of a set of bytes
  * locate the first occurrence in the string of any bytes
  * in the string accept.
  *
