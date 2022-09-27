@@ -17,11 +17,11 @@ char *_strchr(char *s, char c)
 	while (*(s + i) != '\0')
 	{
 		if (*(s + i) == c)
-			break;
+		{
+			return (&*(s + i));
+		}
 		i++;
 	}
 
-	if (i == 0)
-		return (NULL);
-	return (&*(s + i));
+	return (NULL);
 }
