@@ -13,29 +13,22 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j, found, start;
+	char *bhaystack;
+	char *pneedle;
 
-	for (i = 0; *(haystack + i) != '\0'; i++)
+	while (*haystack != '\0')
 	{
-		if (*(i + haystack) == *(needle + 0))
+		bhaystack = haystack;
+		pneedle = needle;
+
+		while (*haystack != '\0' && *pneedle != '\0' && *haystack == *pneedle)
 		{
-			/*printf("first character found at %d\n", i);*/
-			start = i;
-			for (j = 0; *(needle + j) != '\0'; j++)
-			{
-				if (*(i + j + haystack) == *(needle + j))
-				{
-					found = 1;
-				}
-				else
-				{
-					found = 0;
-					break;
-				}
-			}
+			haystack++;
+			pneedle++;
 		}
+		if (!*pneedle)
+			return (bhaystack);
+		haystack = bhaystack + 1;
 	}
-	if (found)
-		return (haystack + start);
-	return ('\0');
+	return (0);
 }
