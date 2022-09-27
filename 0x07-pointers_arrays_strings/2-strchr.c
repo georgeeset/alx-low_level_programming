@@ -23,6 +23,6 @@ char *_strchr(char *s, char c)
 	}
 
 	if (*(s + 1) == c)
-		return (&*(s + 1);
+		return (&*(s + 1));
 	return ('\0');
 }
