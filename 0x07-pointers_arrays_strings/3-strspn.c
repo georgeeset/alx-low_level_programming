@@ -27,6 +27,6 @@ unsigned int _strspn(char *s, char *accept)
 		}
 	}
 	if (*(accept + i) == *(s + j))
-		return (j);
+		return (j + 1);
 	return (0);
 }
