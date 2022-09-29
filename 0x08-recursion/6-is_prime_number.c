@@ -29,5 +29,5 @@ int is_prime_number(int n)
 {
 	if (n < 0)
 		n *= -1;
-	return recursion_detection(n, 2);
+	return (recursion_detection(n, 2));
 }
