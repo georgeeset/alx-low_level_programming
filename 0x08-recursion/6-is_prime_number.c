@@ -4,6 +4,7 @@
  * recursion_detection - detect if number is prime or not
  * @num: number to test
  * @div: divider integer
+ * Return: integer indicating prime or not
  */
 
 int recursion_detection(int num, int div)
