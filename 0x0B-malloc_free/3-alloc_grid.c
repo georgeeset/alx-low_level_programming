@@ -21,6 +21,7 @@ int **alloc_grid(int width, int height)
 	if (mem == NULL)
 	{
 		free(mem);
+		return (NULL);
 	}
 	for (i = 0; i < height; i++)
 	{
