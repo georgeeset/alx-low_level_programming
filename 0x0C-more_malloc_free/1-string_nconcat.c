@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (k == NULL)
 		return (NULL);
 
-	for (i = 0; i < len1; i++)
+	for (i = 0; i < total; i++)
 	{
 		if (i < len1)
 		{
@@ -41,7 +41,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 		else
 		{
-			*(k + i) = *(s2 + (i - len1);
+			*(k + i) = *(s2 + (i - len1));
 		}
 	}
 
