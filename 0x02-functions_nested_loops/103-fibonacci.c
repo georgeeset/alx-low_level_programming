@@ -23,6 +23,6 @@ int main(void)
 			cnt += t1;
 		}
 	}
-	printf("%ld\t", cnt);
+	printf("%ld\n", cnt);
 	return (0);
 }

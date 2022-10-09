@@ -21,5 +21,6 @@ int main(void)
 		second = third;
 		printf(", %lu", third);
 	}
+	putchar(10);
 	return (0);
 }
