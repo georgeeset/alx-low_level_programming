@@ -8,21 +8,18 @@
  */
 int main(void)
 {
-	long int n1, n2, fn, afn;
+	unsigned long int first, second, third;
+	int count;
 
-	n1 = 1;
-	n2 = 2;
-	fn = afn = 0;
-	while (fn <= 4000000)
+	first = 1;
+	second = 2;
+	printf("%lu, %lu", first, second);
+	for (count = 2; count < 50; count++)
 	{
-		fn = n1 + n2;
-		n1 = n2;
-		n2 = fn;
-		if ((n1 % 2) == 0)
-		{
-			afn += n1;
-		}
+		third = first + second;
+		first = second;
+		second = third;
+		printf(", %lu", third);
 	}
-	printf("%ld\n", afn);
 	return (0);
 }
