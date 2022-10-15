@@ -9,12 +9,12 @@
 void print_all(const char * const format, ...)
 {
 	va_list  data;
-	int i = 0;
+	int i = 0, unknown = 0;
 	char *str;
 
 	va_start(data, format);
 
-	while (format[i] != '\0' && i < 9)
+	while (format[i] != '\0' && i < 9 + unknown)
 	{
 		switch (format[i])
 		{
@@ -33,10 +33,11 @@ void print_all(const char * const format, ...)
 			break;
 		default:
 			i++;
+			unknown++;
 			continue;
 		}
 		i++;
-		if (format[i] != '\0' && i > 0 && i < 9)
+		if (format[i] != '\0' && i > 0 && i < (9 + unknown))
 			printf(", ");
 	}
 	putchar(10);
