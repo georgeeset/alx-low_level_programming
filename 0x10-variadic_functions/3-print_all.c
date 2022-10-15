@@ -17,14 +17,13 @@ void print_all(const char * const format, ...)
 	{
 		if (i > 8)
 			break;
-
 		switch (format[i])
 		{
 		case 'i':
 			printf("%d", va_arg(data, int));
 			break;
 		case 'f':
-			printf("%f", va_arg(data, double));
+			printf("%1.2f", va_arg(data, double));
 			break;
 		case 'c':
 			printf("%c", va_arg(data, int));
@@ -37,7 +36,7 @@ void print_all(const char * const format, ...)
 			continue;
 		}
 		i++;
-		if (format[i] != '\0' && i > 0)
+		if (format[i] != '\0' && i > 0 && i < 9)
 			printf(", ");
 	}
 	putchar(10);
