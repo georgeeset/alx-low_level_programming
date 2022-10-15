@@ -43,4 +43,5 @@ void print_all(const char * const format, ...)
 			printf(", ");
 	}
 	putchar(10);
+	va_end(data);
 }
