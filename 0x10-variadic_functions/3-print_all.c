@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 
 	va_start(data, format);
 
-	while (format[i] != '\0')
+	while (format[i] != '\0' && i < 9)
 	{
 		switch (format[i])
 		{
@@ -29,9 +29,7 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			str = va_arg(data, char *);
-			if (str == NULL)
-				printf("(nil)");
-			printf("%s", str);
+			printf("%s", str == NULL ? "(nil)" : str);
 			break;
 		default:
 			i++;
