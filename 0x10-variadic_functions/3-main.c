@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	print_all("ceisfissscf", 'B', 3, "stSchool", 31.635, 2003, "free","remote", "fire", 'Z', 134.5);
+	print_all("ceisfissscf", 'B', 3, "stSchool", 31.635, 2003, "free","remote", NULL, 'Z', 134.5);
 	return (0);
 }
