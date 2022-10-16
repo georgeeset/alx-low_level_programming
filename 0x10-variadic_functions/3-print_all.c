@@ -45,6 +45,6 @@ void print_all(const char * const format, ...)
 		if (format[i] != '\0' && i > 0 && i < (9 + unknown))
 			printf(", ");
 	}
-	putchar(10);
+	printf("\n");
 	va_end(data);
 }
