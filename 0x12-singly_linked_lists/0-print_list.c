@@ -8,7 +8,7 @@
 size_t print_list(const list_t *h)
 {
 	list_t *point;
-	unsigned int i = 0;
+	size_t i = 0;
 
 	point =(list_t *) h;
 	while (point != NULL)
