@@ -10,7 +10,7 @@ size_t print_list(const list_t *h)
 	list_t *point;
 	size_t i = 0;
 
-	point =(list_t *) h;
+	point = (list_t *) h;
 	while (point != NULL)
 	{
 		if (point->str == NULL)
