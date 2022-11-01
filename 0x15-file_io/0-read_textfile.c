@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *str;
 	ssize_t length;
 
-	if (!filename)
+	if (!filename || !letters)
 		return (0);
 
 	fl = open(filename, O_RDONLY);
@@ -36,7 +36,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	printf("%s\n", str);
+	if (length > 0)
+		printf("%s\n", str);
 	close(fl);
 	free(str);
 	return (length);
