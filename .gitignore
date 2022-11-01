@@ -1,0 +1,5 @@
+
+*~
+*.out
+0x09-static_libraries/*.c
+0x09-static_libraries/*.o
