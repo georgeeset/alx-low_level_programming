@@ -37,7 +37,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	if (length > 0)
-		printf("%s\n", str);
+		printf("%s", str);
 	close(fl);
 	free(str);
 	return (length);
