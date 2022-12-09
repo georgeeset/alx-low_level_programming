@@ -11,6 +11,9 @@ size_t dlistint_len(const dlistint_t *h)
 	size_t count = 0;
 	dlistint_t *head = (dlistint_t *) h;
 
+	if (h == NULL)
+		return (count);
+
 	/* first confirm that pointer is at the real head */
 	while (head->prev)
 	{
