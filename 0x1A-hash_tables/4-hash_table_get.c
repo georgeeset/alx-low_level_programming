@@ -16,16 +16,16 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t *pointer;
 
 	if (!ht)
-		return NULL;
+		return (NULL);
 	if (!key)
-		return NULL;
+		return (NULL);
 	size = ht->size;
 
 	index_list = ht->array[key_index((unsigned char *)key, size)];
 
 	pointer = index_list;
 	if (!index_list)
-		return NULL;
+		return (NULL);
 	while (pointer)
 	{
 		if (strcmp(pointer->key, key) == 0)
