@@ -26,7 +26,6 @@ void free_linked_list(hash_node_t *head)
  * @ht: is the hash table
  * Return: NULL
  */
-
 void hash_table_delete(hash_table_t *ht)
 {
 	hash_node_t **node_list;
@@ -42,5 +41,6 @@ void hash_table_delete(hash_table_t *ht)
 			free_linked_list(node_list[i]);
 		}
 	}
+	free(ht->array);
 	free(ht);
 }
