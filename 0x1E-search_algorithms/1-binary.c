@@ -42,10 +42,9 @@ int binary_search(int *array, size_t size, int value)
 	int index;
 
 	index = recursive_breaker(array, size, value);
-
-	if (index)
-		return (array[index] == value ? index : -1);
-	return (-1);
+	if (index < 0)
+		return (-1);
+	return (array[index] == value ? index : -1);
 }
 
 /**
