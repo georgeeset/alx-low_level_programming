@@ -48,15 +48,15 @@ int binary_search(int *array, size_t size, int value)
 	index = recursive_breaker(array, size, value);
 
 	if (index)
-		return (array[index] == value? index : -1);
+		return (array[index] == value ? index : -1);
 	return (-1);
 }
 
 /**
  * print_update - print the updated array list
  *
- * size: size of the array to print
- * array: lis of integer
+ * @size: size of the array to print
+ * @array: lis of integer
  * Return: void
  */
 
