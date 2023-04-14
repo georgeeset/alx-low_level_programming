@@ -11,24 +11,20 @@
  */
 int recursive_breaker(int *array, size_t size, int value)
 {
-	size_t half = size / 2;
+	size_t half;
 
 	if (array == NULL || size == 0)
 		return (-1);
+	 half = size / 2;
 
 	print_update(array, size);
-
 	if (half && size % 2 == 0)
 		half--;
-
 	if (value == array[half])
 		return ((int)half);
-
 	if (value < array[half])
 		return (recursive_breaker(array, half, value));
-
 	half++;
-
 	return (recursive_breaker(array + half, size - half, value) + half);
 }
 
