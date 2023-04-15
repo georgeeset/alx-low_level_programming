@@ -17,6 +17,7 @@ int main(void)
 	printf("Found %d at index: %d\n\n", 17, jump_search(array, size, 17));
 	printf("Found %d at index: %d\n\n", 25, jump_search(array, size, 25));
 	printf("Found %d at index: %d\n\n", 0, jump_search(array, size, 0));
-	printf("Found %d at index: %d\n", 999, jump_search(array, size, 999));
+	printf("Found %d at index: %d\n\n", 999, jump_search(array, 3, 999));
+	printf("Found %d at index: %d\n\n", 5, jump_search(array, 2, 5));
 	return (EXIT_SUCCESS);
 }

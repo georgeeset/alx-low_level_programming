@@ -14,7 +14,7 @@
 size_t recursive_jump(int *array, size_t size,
 		   size_t position, size_t k, int value)
 {
-	if ((position < size) && (*(array + position) <= value))
+	if ((position < size) && (*(array + position) < value))
 	{
 
 		printf("Value checked array[%lu] = [%d]\n",
@@ -47,7 +47,7 @@ int jump_search(int *array, size_t size, int value)
 {
 	size_t s = 0, i, k = 0;
 
-	if (!array || size == 0)
+	if (!array || size < 1)
 		return (-1);
 
 	k = sqrt(size);
@@ -55,7 +55,7 @@ int jump_search(int *array, size_t size, int value)
 	s = recursive_jump(array, size, 0, k, value);
 
 	/*for (i = s; (i < size) && (i <= (s + k)); i++)*/
-	for (i = s; (i < size); i++)
+	for (i = s; ((i < size) && (i <= (s + k))); i++)
 	{
 		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 		if (array[i] == value)
