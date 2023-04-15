@@ -14,15 +14,7 @@
 size_t recursive_jump(int *array, size_t size,
 		   size_t position, size_t k, int value)
 {
-
-	if (*(array + position) >= value)
-	{
-		printf("Value found between indexes [%lu] and [%lu]\n",
-		       position - k, position);
-		return (position - k);
-	}
-
-	if (position < size)
+	if (position <= size && *(array + position) <= value)
 	{
 
 		printf("Value checked array[%lu] = [%d]\n",
