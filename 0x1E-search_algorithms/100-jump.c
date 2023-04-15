@@ -9,6 +9,7 @@
  * @k: jump step while scanning. sqrt(size)
  * @value: the value we are searcing for
  * @s: lower index range where value was found
+ * Return: void
  */
 
 void recursive_jump(int *array, size_t size,
@@ -28,12 +29,11 @@ void recursive_jump(int *array, size_t size,
 
 		printf("Value checked array[%lu] = [%d]\n",
 		       position, *(array + position));
-	        recursive_jump(array, size, position + k, k, value, s);
+		recursive_jump(array, size, position + k, k, value, s);
 	}
 	printf("Value found between indexes [%lu] and [%lu]\n",
 	       position - k, position);
 	*s = position - k;
-	return;
 }
 
 /**
