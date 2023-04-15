@@ -9,11 +9,9 @@
  * @k: jump step while scanning. sqrt(size)
  * @value: the value we are searcing for
  * @s: lower index range where value was found
- * Return: 1 if more iteration is needed,
- *         0 if no iteration is needed,
  */
 
-int recursive_jump(int *array, size_t size,
+void recursive_jump(int *array, size_t size,
 		   size_t position, size_t k, int value, size_t *s)
 {
 
@@ -22,7 +20,7 @@ int recursive_jump(int *array, size_t size,
 		printf("Value found between indexes [%lu] and [%lu]\n",
 		       position - k, position);
 		*s = position - k;
-		return (1);
+		return;
 	}
 
 	if (position < size)
@@ -30,12 +28,12 @@ int recursive_jump(int *array, size_t size,
 
 		printf("Value checked array[%lu] = [%d]\n",
 		       position, *(array + position));
-		return (recursive_jump(array, size, position + k, k, value, s));
+	        recursive_jump(array, size, position + k, k, value, s);
 	}
 	printf("Value found between indexes [%lu] and [%lu]\n",
 	       position - k, position);
 	*s = position - k;
-	return (1);
+	return;
 }
 
 /**
@@ -49,27 +47,22 @@ int recursive_jump(int *array, size_t size,
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t s, i, k = 0;
-	int status = 0;
+	size_t s = 0, i, k = 0;
 
-	if (size > 1)
-		k = sqrt(size);
 	if (!array || size == 0)
 		return (-1);
 
-	status = recursive_jump(array, size, 0, k, value, &s);
+	k = sqrt(size);
 
-	if (status < 0)
-		return (-1);
-	if (status == 0)
-	{
-		return (s);
-	}
+	recursive_jump(array, size, 0, k, value, &s);
+
 	for (i = s; (i < size) && (i <= (s + k)); i++)
 	{
 		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 		if (array[i] == value)
 			return (i);
+		if (array[i] > value)
+			return (-1);
 	}
 	return (-1);
 }
