@@ -21,6 +21,14 @@ size_t recursive_jump(int *array, size_t size,
 		       position, *(array + position));
 		return (recursive_jump(array, size, position + k, k, value));
 	}
+	/* if value is smaller than the first element */
+	if (position == 0)
+	{
+		printf("Value found between indexes [%lu] and [%lu]\n",
+		       position, position + k);
+		return (position);
+	}
+
 	printf("Value found between indexes [%lu] and [%lu]\n",
 	       position - k, position);
 	return (position - k);
