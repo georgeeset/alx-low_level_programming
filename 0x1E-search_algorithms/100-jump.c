@@ -54,7 +54,7 @@ int jump_search(int *array, size_t size, int value)
 
 	if (size > 1)
 		k = sqrt(size);
-	if (!array)
+	if (!array || size == 0)
 		return (-1);
 
 	status = recursive_jump(array, size, 0, k, value, &s);
@@ -65,7 +65,7 @@ int jump_search(int *array, size_t size, int value)
 	{
 		return (s);
 	}
-	for (i = s; (i < size); i++)
+	for (i = s; (i < size) && (i <= (s + k)); i++)
 	{
 		printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 		if (array[i] == value)
